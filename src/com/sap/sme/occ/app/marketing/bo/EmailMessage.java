@@ -18,5 +18,7 @@ public class EmailMessage {
 	private Pair<String, String> cc;
 	
 	private Pair<String, String> bcc;
+	
+	
 
 }

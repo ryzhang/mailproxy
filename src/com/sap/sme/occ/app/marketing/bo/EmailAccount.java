@@ -1,23 +1,38 @@
 package com.sap.sme.occ.app.marketing.bo;
 
-import org.springframework.stereotype.Service;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
+@Entity
+@Table(name="EMAIL_ACCOUNT")
 public class EmailAccount {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
+	@Column(name="USER")
 	private String userName;
 	
+	@Column(name="EMAIL")
 	private String emailAddress;
 	
+	@Column(name="TOKEN")
 	private String oauthToken;
 	
+	@Column(name="PROVIDER")
 	private String provider;
 	
+	@Column(name="NYLAS_ID")
 	private String nylasID;
 	
+	@Column(name="OU")
 	private String organizationUnit;
 	
+	@Column(name="SYNC_STATUS")
 	private String sync_state;
 	
 	

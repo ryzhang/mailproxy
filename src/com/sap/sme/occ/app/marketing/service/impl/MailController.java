@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.google.gson.Gson;
 import com.sap.sme.occ.app.marketing.bo.EmailAccount;
+import com.sap.sme.occ.app.marketing.dao.EmailDAO;
 import com.sap.sme.occ.app.marketing.service.MailService;
 
 @Controller
@@ -21,6 +22,8 @@ public class MailController {
 
 	@Autowired
 	private MailService mailService;
+	
+
 	
 	@RequestMapping(value="/registerEmailAccount", method=RequestMethod.GET)
 	public  ResponseEntity<Boolean> registerEmailAccount(HttpServletRequest request, HttpServletResponse response)
@@ -53,12 +56,12 @@ public class MailController {
 		return respEntity;
 	}
 	
-	@RequestMapping(value="/messages", method=RequestMethod.GET)
-	public ResponseEntity<String> retriveMessages(HttpServletRequest request, HttpServletResponse response)
-	{
-		
-		
-		
-	}
+//	@RequestMapping(value="/messages", method=RequestMethod.GET)
+//	public ResponseEntity<String> retrieveMessages(HttpServletRequest request, HttpServletResponse response)
+//	{
+//		
+//		
+//		
+//	}
 
 }
